@@ -30,7 +30,7 @@
 }
 
 // Mixin to create buttons
-@mixin style-button($color, $textColor, $isInverted: false) {
+@mixin style-button($color, $textColor, $isInverted: true) {
 
   background: $color;
   color: $textColor;
@@ -42,15 +42,15 @@
 
 .button--primary {
   @extend .button;
-  @include style-button(#4285f4, #ffffff);
+  @include style-button(#fff, $colorDeepOrange500);
 }
 
 .button--secondary {
   @extend .button;
-  @include style-button(#ffffff, $colorBlue);
+  @include style-button(#ffffff, $colorDeepOrange500);
 }
 
 .button--secondary-variation {
   @extend .button;
-  @include style-button(#ffffff, $colorBlue, true);
+  @include style-button(#ffffff, $colorDeepOrange500, true);
 }
